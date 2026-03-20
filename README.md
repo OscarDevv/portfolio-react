@@ -6,7 +6,6 @@
   <img src="https://img.shields.io/badge/pnpm-compatible-orange?logo=pnpm" alt="Gerenciador de pacotes (PNPM)" />
   <img src="https://visitor-badge.laobi.icu/badge?page_id=oscardevv.portfolio-react" alt="Quantidade de visitas" />
   <img src="https://img.shields.io/github/languages/top/oscardevv/portfolio-react" alt="Linguagem mais utilizada" />
-  <img src="https://img.shields.io/github/license/oscardevv/portfolio-react" />
 
   <br>
 
