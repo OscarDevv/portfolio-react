@@ -1,4 +1,5 @@
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react";
 import GradientLine from "./components/page/GradientLine";
 import Header from "./components/page/Header";
 import Hero from "./components/page/Hero";
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <GradientLine />
       <SpeedInsights />
+      <Analytics />
     </>
   );
 }
