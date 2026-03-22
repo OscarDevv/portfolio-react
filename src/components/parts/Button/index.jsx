@@ -21,7 +21,7 @@ function Button({ type, variant, children, ...props }) {
       <a
         {...props}
         className={
-          "px-5 py-3 font-semibold text-xl rounded-full cursor-pointer transition-colors duration-200 " +
+          "px-5 py-3 font-semibold text-xl rounded-full cursor-pointer z-40 transition-colors duration-200 " +
           addClasses
         }
       >
@@ -34,7 +34,7 @@ function Button({ type, variant, children, ...props }) {
     <button
       {...props}
       className={
-        "px-5 py-3 font-semibold text-xl rounded-full cursor-pointer transition-colors duration-200 " +
+        "px-5 py-3 font-semibold text-xl rounded-full cursor-pointer z-40 transition-colors duration-200 " +
         addClasses
       }
     >

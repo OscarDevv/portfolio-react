@@ -41,7 +41,7 @@ function HeroGlass() {
 
   return (
     <div
-      className="absolute left-[50%] top-[50%] translate-[-50%] w-[75vw] min-h-[167.5] h-fit text-center px-10 py-20 bg-slate-950/60 border-2 border-slate-500 rounded-4xl backdrop-blur-xs"
+      className="absolute w-full left-[50%] top-[calc(50%)] md:top-[50%] translate-[-50%] md:w-[75vw] min-h-[167.5] h-fit text-center px-10 py-20 bg-slate-950/60 border-t-2 border-b-2 md:border-2 border-slate-500 rounded-4xl backdrop-blur-xs z-30"
       ref={heroGlassRef}
     >
       <h1 className="text-4xl font-semibold mb-10">
