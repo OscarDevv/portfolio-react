@@ -44,9 +44,9 @@ function HeroGlass() {
       className="absolute top-[calc(50%)] left-[50%] z-30 w-full min-h-[167.5] h-fit px-10 py-20 text-center bg-slate-950/60 border-t-2 border-b-2 border-slate-500 rounded-4xl translate-[-50%] backdrop-blur-xs md:top-[50%] md:w-[75vw] md:border-2"
       ref={heroGlassRef}
     >
-      <h1 className="mb-10 text-4xl font-semibold">
+      <h2 className="mb-10 text-4xl font-heading">
         Criando interfaces únicas e modernas.
-      </h1>
+      </h2>
 
       <p className="mb-10 text-xl">
         Aprendendo, construindo e evoluindo a cada projeto.

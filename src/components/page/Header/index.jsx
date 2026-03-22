@@ -40,7 +40,7 @@ function Header() {
       ref={headerRef}
     >
       <div className="px-6 py-8 border-slate-500 md:px-16 md:bg-slate-950/50 md:border-r-2 md:border-b-2 md:rounded-br-[50px] md:backdrop-blur-xs">
-        <h1 className="text-4xl font-bold select-none">Oscar</h1>
+        <h1 className="text-4xl font-heading select-none">Oscar</h1>
       </div>
 
       <div className="relative flex items-center justify-center gap-5 w-fit px-7 py-2 font-semibold bg-slate-950/50 border-2 border-slate-500 rounded-full backdrop-blur-xs">

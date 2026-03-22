@@ -30,7 +30,7 @@
 
 ## Sobre o projeto
 
-![Seção hero do portfólio com fundo escuro em gradiente azul, nome “Oscar” no topo, menu de navegação (Sobre, Habilidades, Projetos, Contato), título “Criando interfaces únicas e modernas”, subtítulo sobre aprendizado contínuo e botões para GitHub e Projetos.](./public/hero-ui.png)
+![Seção hero do portfólio com fundo escuro em gradiente azul, nome “Oscar” no topo, menu de navegação (Sobre, Habilidades, Projetos, Contato), título “Criando interfaces únicas e modernas”, subtítulo sobre aprendizado contínuo e botões para GitHub e Projetos.](./public/hero-ui.jpeg)
 
 Na minha opinião, todo programador deve ter um portfólio para mostrar suas habilidades, independente se ele é um iniciante ou um profissional, isso é algo indispensável.
 
