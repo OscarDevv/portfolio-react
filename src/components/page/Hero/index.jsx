@@ -24,7 +24,7 @@ function Hero() {
   }, []);
 
   return (
-    <div className="w-full h-200 min-h-screen relative">
+    <div className="relative w-full min-h-screen h-200">
       <DarkVeil
         hueShift={40}
         noiseIntensity={0}
@@ -37,14 +37,14 @@ function Hero() {
       <HeroGlass />
 
       <div
-        className="absolute right-0 bottom-0 w-55.75 h-26.25 bg-slate-900/60 rounded-tl-[50px] border-t-2 border-l-2 border-slate-500 backdrop-blur-xs z-40"
+        className="absolute right-0 bottom-0 z-40 w-55.75 h-26.25 bg-slate-900/60 border-t-2 border-l-2 border-slate-500 rounded-tl-[50px] backdrop-blur-xs"
         ref={nextSectBtnRef}
       >
         <div className="relative w-full h-26.25">
           <CircleIcon
             to="#about"
             icon={faCircleArrowDown}
-            classes="absolute left-[50%] top-[50%] translate-[-50%] scale-125 text-cyan-300 hover:text-cyan-500"
+            classes="absolute top-[50%] left-[50%] text-cyan-300 translate-[-50%] scale-125 hover:text-cyan-500"
           />
         </div>
       </div>

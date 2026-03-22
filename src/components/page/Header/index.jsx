@@ -36,19 +36,19 @@ function Header() {
 
   return (
     <header
-      className="flex justify-between items-center gap-0 md:gap-10 pr-6 md:pr-16 bg-slate-950/50 backdrop-blur-xs fixed top-0 w-screen z-50 text-neutral-300 border-slate-500 border-b-2 md:border-0 md:m-0 md:rounded-none md:justify-start md:bg-transparent"
+      className="fixed top-0 z-50 flex items-center justify-between gap-0 w-screen pr-6 text-neutral-300 bg-slate-950/50 border-b-2 border-slate-500 backdrop-blur-xs md:justify-start md:gap-10 md:pr-16 md:m-0 md:bg-transparent md:border-0 md:rounded-none"
       ref={headerRef}
     >
-      <div className="md:bg-slate-950/50 md:backdrop-blur-xs px-6 py-8 md:px-16  border-slate-500  md:rounded-br-[50px] md:border-r-2 md:border-b-2">
-        <h1 className="font-bold text-4xl select-none">Oscar</h1>
+      <div className="px-6 py-8 border-slate-500 md:px-16 md:bg-slate-950/50 md:border-r-2 md:border-b-2 md:rounded-br-[50px] md:backdrop-blur-xs">
+        <h1 className="text-4xl font-bold select-none">Oscar</h1>
       </div>
 
-      <div className="flex justify-center items-center gap-5 relative bg-slate-950/50 backdrop-blur-xs w-fit border-2 border-slate-500 font-semibold px-7 py-2 rounded-full">
+      <div className="relative flex items-center justify-center gap-5 w-fit px-7 py-2 font-semibold bg-slate-950/50 border-2 border-slate-500 rounded-full backdrop-blur-xs">
         <Navbar isDisplayed={isNavOpen} animation={navAnimation} />
 
         <button
           onClick={toggleMenu}
-          className="text-2xl text-cyan-100 cursor-pointer transition-colors duration-200 hover:text-cyan-400 md:hidden"
+          className="cursor-pointer text-2xl text-cyan-100 transition-colors duration-200 hover:text-cyan-400 md:hidden"
         >
           <FontAwesomeIcon icon={faBars} />
         </button>

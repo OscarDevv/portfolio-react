@@ -1,5 +1,5 @@
 function GradientLine() {
-  return <div className={`bg-linear-90 from-sky-500 to-indigo-600 h-2`}></div>;
+  return <div className={`h-2 bg-linear-90 from-sky-500 to-indigo-600`}></div>;
 }
 
 export default GradientLine;

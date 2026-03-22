@@ -6,7 +6,7 @@ function CircleIcon({ to, icon, classes, ...props }) {
       {...props}
       href={to}
       className={
-        "flex justify-center items-center border-2 rounded-full w-12.5 h-12.5 z-40 transition-colors duration-200 " +
+        "z-40 flex items-center justify-center w-12.5 h-12.5 border-2 rounded-full transition-colors duration-200 " +
         classes
       }
     >

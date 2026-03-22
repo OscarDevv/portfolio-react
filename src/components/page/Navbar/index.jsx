@@ -43,14 +43,14 @@ function Navbar({ isDisplayed, animation }) {
   return (
     <nav
       ref={navbarRef}
-      className={`fixed top-21.25 right-0 bg-slate-950 py-10 px-15 text-xl rounded-b-xl border-slate-500 border-2 md:relative md:translate-0 md:bg-transparent md:py-0 md:px-0 md:text-base md:rounded-none md:border-none md:block md:top-0 md:left-0 ${isDisplayed ? "block" : "hidden"}`}
+      className={`fixed top-21.25 right-0 px-15 py-10 text-xl bg-slate-950 border-2 border-slate-500 rounded-b-xl md:top-0 md:left-0 md:block md:relative md:bg-transparent md:border-none md:rounded-none md:px-0 md:py-0 md:text-base md:translate-0 ${isDisplayed ? "block" : "hidden"}`}
     >
-      <ul className="flex justify-center items-center gap-5 flex-col md:flex-row">
+      <ul className="flex flex-col items-center justify-center gap-5 md:flex-row">
         {navItems.map((item, index) => {
           return (
             <li
               key={index}
-              className="cursor-pointer select-none transition-colors duration-200 text-cyan-100 hover:text-cyan-400"
+              className="cursor-pointer select-none text-cyan-100 transition-colors duration-200 hover:text-cyan-400"
             >
               <a href={item.to}>{item.name}</a>
             </li>

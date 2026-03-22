@@ -41,10 +41,10 @@ function HeroGlass() {
 
   return (
     <div
-      className="absolute w-full left-[50%] top-[calc(50%)] md:top-[50%] translate-[-50%] md:w-[75vw] min-h-[167.5] h-fit text-center px-10 py-20 bg-slate-950/60 border-t-2 border-b-2 md:border-2 border-slate-500 rounded-4xl backdrop-blur-xs z-30"
+      className="absolute top-[calc(50%)] left-[50%] z-30 w-full min-h-[167.5] h-fit px-10 py-20 text-center bg-slate-950/60 border-t-2 border-b-2 border-slate-500 rounded-4xl translate-[-50%] backdrop-blur-xs md:top-[50%] md:w-[75vw] md:border-2"
       ref={heroGlassRef}
     >
-      <h1 className="text-4xl font-semibold mb-10">
+      <h1 className="mb-10 text-4xl font-semibold">
         Criando interfaces únicas e modernas.
       </h1>
 
@@ -61,11 +61,11 @@ function HeroGlass() {
           href="https://github.com/OscarDevv"
         >
           <FontAwesomeIcon icon={faGithub} className="text-2xl" />
-          <span className="font-semibold ml-3">GitHub</span>
+          <span className="ml-3 font-semibold">GitHub</span>
         </Button>
         <Button id="button-gsap-2" type="link" variant="light" href="#projects">
           <FontAwesomeIcon icon={faRocket} className="text-2xl" />
-          <span className="font-semibold ml-3">Projetos</span>
+          <span className="ml-3 font-semibold">Projetos</span>
         </Button>
       </ButtonGroup>
     </div>
