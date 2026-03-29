@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Chakra Petch";
-  src: url("/public/ChakraPetch-Bold.ttf") format("truetype");
+  src: url("/ChakraPetch-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 

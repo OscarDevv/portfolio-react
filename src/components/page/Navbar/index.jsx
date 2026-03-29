@@ -4,7 +4,7 @@ import gsap from "gsap";
 function Navbar({ isDisplayed, animation }) {
   const navItems = [
     {
-      name: "Sobre",
+      name: "Sobre mim",
       to: "#about",
     },
     {

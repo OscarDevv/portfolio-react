@@ -29,7 +29,7 @@ function Hero() {
         hueShift={40}
         noiseIntensity={0}
         scanlineIntensity={0}
-        speed={1}
+        speed={0.5}
         scanlineFrequency={0}
         warpAmount={0}
       />
@@ -45,6 +45,7 @@ function Hero() {
             to="#about"
             icon={faCircleArrowDown}
             classes="absolute top-[50%] left-[50%] text-cyan-300 translate-[-50%] scale-125 hover:text-cyan-500"
+            aria-label="Ir para seção Sobre Mim"
           />
         </div>
       </div>
