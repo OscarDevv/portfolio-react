@@ -2,42 +2,46 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import Button, { ButtonGroup } from "../../parts/Button";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useContext } from "react";
 import gsap from "gsap";
+import OtimizationContext from "../../parts/OtimizationProvider/OtimizationContext";
 
 function HeroGlass() {
   const heroGlassRef = useRef(null);
+  const { slowMode } = useContext(OtimizationContext)
 
   useEffect(() => {
-    gsap.fromTo(
-      heroGlassRef.current,
-      {
-        scale: 0.9,
-        opacity: 0,
-      },
-      {
-        scale: 1,
-        opacity: 1,
-        duration: 0.7,
-        ease: "back",
-      },
-    );
+    if(!slowMode) {
+      gsap.fromTo(
+        heroGlassRef.current,
+        {
+          scale: 0.9,
+          opacity: 0,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.7,
+          ease: "back",
+        },
+      );
 
-    gsap.fromTo(
-      "#button-gsap-1, #button-gsap-2",
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.25,
-        duration: 0.7,
-        ease: "back",
-      },
-    );
-  }, []);
+      gsap.fromTo(
+        "#button-gsap-1, #button-gsap-2",
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.25,
+          duration: 0.7,
+          ease: "back",
+        },
+      );
+    }
+  }, [slowMode]);
 
   return (
     <div

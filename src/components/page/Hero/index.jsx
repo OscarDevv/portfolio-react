@@ -2,37 +2,43 @@ import DarkVeil from "../../parts/DarkVeil";
 import HeroGlass from "../HeroGlass";
 import CircleIcon from "../../parts/CircleIcon";
 import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import gsap from "gsap";
+import OtimizationContext from "../../parts/OtimizationProvider/OtimizationContext.js"
 
 function Hero() {
   const nextSectBtnRef = useRef(null);
+  const { slowMode } = useContext(OtimizationContext)
 
   useEffect(() => {
-    gsap.fromTo(
-      nextSectBtnRef.current,
-      {
-        x: 50,
-        opacity: 0,
-      },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 0.7,
-      },
-    );
-  }, []);
+    if (!slowMode) {
+      gsap.fromTo(
+        nextSectBtnRef.current,
+        {
+          x: 50,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.7,
+        },
+      );
+    }
+  }, [slowMode]);
 
   return (
-    <div className="relative w-full min-h-screen h-200">
-      <DarkVeil
-        hueShift={40}
-        noiseIntensity={0}
-        scanlineIntensity={0}
-        speed={0.5}
-        scanlineFrequency={0}
-        warpAmount={0}
-      />
+    <div className={`relative w-full min-h-screen h-200 ${slowMode ? "bg-linear-180 from-slate-950 to-cyan-800" : ""}`}>
+      {!slowMode && (
+        <DarkVeil
+          hueShift={40}
+          noiseIntensity={0}
+          scanlineIntensity={0}
+          speed={0.5}
+          scanlineFrequency={0}
+          warpAmount={0}
+        />
+      )}
 
       <HeroGlass />
 

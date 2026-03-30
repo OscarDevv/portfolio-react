@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "module",
   "engines": {
     "node": ">=18",
@@ -41,6 +41,7 @@
     "ogl": "^1.0.11",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "react-fps": "^1.0.6",
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {

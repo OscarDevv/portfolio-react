@@ -1,10 +1,11 @@
 import Navbar from "../Navbar";
 import CircleIcon from "../../parts/CircleIcon";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useContext } from "react";
 import gsap from "gsap";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import OtimizationContext from "../../parts/OtimizationProvider/OtimizationContext";
 
 function Header() {
   const headerRef = useRef(null);
@@ -12,22 +13,25 @@ function Header() {
   const [navAnimation, setNavAnimation] = useState(
     () => window.innerWidth < 768,
   );
+  const { slowMode } = useContext(OtimizationContext)
 
   useEffect(() => {
-    gsap.fromTo(
-      headerRef.current,
-      {
-        x: -50,
-        opacity: 0,
-      },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 0.7,
-        ease: "power1",
-      },
-    );
-  }, []);
+    if (!slowMode) {
+      gsap.fromTo(
+        headerRef.current,
+        {
+          x: -50,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.7,
+          ease: "power1",
+        },
+      );
+    }
+  }, [slowMode]);
 
   function toggleMenu() {
     setIsNavOpen((prev) => !prev);

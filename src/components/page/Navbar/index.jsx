@@ -1,5 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useContext } from "react";
 import gsap from "gsap";
+import OtimizationContext from "../../parts/OtimizationProvider/OtimizationContext";
 
 function Navbar({ isDisplayed, animation }) {
   const navItems = [
@@ -20,11 +21,12 @@ function Navbar({ isDisplayed, animation }) {
       to: "#contact",
     },
   ];
-
   const navbarRef = useRef(null);
 
+  const { slowMode } = useContext(OtimizationContext)
+
   useEffect(() => {
-    if (animation) {
+    if (!slowMode && animation) {
       gsap.fromTo(
         navbarRef.current,
         {
@@ -38,7 +40,7 @@ function Navbar({ isDisplayed, animation }) {
         },
       );
     }
-  }, [animation]);
+  }, [slowMode, animation]);
 
   return (
     <nav
