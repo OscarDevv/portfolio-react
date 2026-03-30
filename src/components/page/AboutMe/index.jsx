@@ -31,7 +31,7 @@ function AboutMe() {
 
   const dialog = useRef(null);
   const contractImageButton = useRef(null);
-  const [ dialogState, setDialogState ] = useState(false)
+  const [dialogState, setDialogState] = useState(false);
 
   return (
     <section
@@ -61,18 +61,22 @@ function AboutMe() {
         src="/foto-perfil.jpeg"
         alt=""
         className="rounded-[100px] w-100 cursor-pointer transition-all delay-100 duration-150 hover:rounded-none"
-        onClick={() => setDialogState(prev => !prev)}
+        onClick={() => setDialogState((prev) => !prev)}
       />
 
-      <dialog ref={dialog} open={dialogState} className="fixed top-0 left-0 w-screen h-screen bg-black/50 z-60">
+      <dialog
+        ref={dialog}
+        open={dialogState}
+        className="fixed top-0 left-0 w-screen h-screen bg-black/50 z-60"
+      >
         <div className="relative flex justify-center items-center h-screen">
-          <img
-            src="/foto-perfil.jpeg"
-            alt=""
-            className="h-[90vh]"
-          />
+          <img src="/foto-perfil.jpeg" alt="" className="h-[90vh]" />
 
-          <button ref={contractImageButton} onClick={() => setDialogState(prev => !prev)} className="absolute right-20 top-20 text-white text-3xl cursor-pointer">
+          <button
+            ref={contractImageButton}
+            onClick={() => setDialogState((prev) => !prev)}
+            className="absolute right-20 top-20 text-white text-3xl cursor-pointer"
+          >
             <FontAwesomeIcon icon={faMinimize} />
           </button>
         </div>

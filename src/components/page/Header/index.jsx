@@ -13,7 +13,7 @@ function Header() {
   const [navAnimation, setNavAnimation] = useState(
     () => window.innerWidth < 768,
   );
-  const { slowMode } = useContext(OtimizationContext)
+  const { slowMode } = useContext(OtimizationContext);
 
   useEffect(() => {
     if (!slowMode) {

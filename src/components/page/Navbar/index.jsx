@@ -23,7 +23,7 @@ function Navbar({ isDisplayed, animation }) {
   ];
   const navbarRef = useRef(null);
 
-  const { slowMode } = useContext(OtimizationContext)
+  const { slowMode } = useContext(OtimizationContext);
 
   useEffect(() => {
     if (!slowMode && animation) {

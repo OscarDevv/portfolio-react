@@ -8,10 +8,10 @@ import OtimizationContext from "../../parts/OtimizationProvider/OtimizationConte
 
 function HeroGlass() {
   const heroGlassRef = useRef(null);
-  const { slowMode } = useContext(OtimizationContext)
+  const { slowMode } = useContext(OtimizationContext);
 
   useEffect(() => {
-    if(!slowMode) {
+    if (!slowMode) {
       gsap.fromTo(
         heroGlassRef.current,
         {
