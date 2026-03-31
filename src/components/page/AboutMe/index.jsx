@@ -35,7 +35,7 @@ function AboutMe() {
 
   return (
     <section
-      className="flex justify-between px-16 py-30 border-t-2 border-slate-500"
+      className="flex flex-col items-center gap-5 px-16 py-30 border-t-2 border-slate-500 md:items-start lg:flex-row lg:justify-between"
       id="about"
     >
       <div className="mr-10">
@@ -47,35 +47,39 @@ function AboutMe() {
               type="button"
               key={index}
               onClick={() => changeContent(btn.content)}
-              className="mr-1 py-3 px-5 bg-cyan-500 rounded-xl font-semibold cursor-pointer border-cyan-300 border-2 transition-colors duration-100 hover:bg-cyan-600 hover:text-neutral-200 hover:border-cyan-500"
+              className="m-1 px-5 py-3 font-semibold cursor-pointer bg-cyan-500 border-2 border-cyan-300 rounded-xl transition-colors duration-100 hover:bg-cyan-600 hover:text-neutral-200 hover:border-cyan-500"
             >
               {btn.name}
             </button>
           );
         })}
 
-        <p className="mt-10 text-lg">{content}</p>
+        <p className="my-10 text-lg md:text-justify">{content}</p>
       </div>
 
       <img
         src="/foto-perfil.jpeg"
-        alt=""
-        className="rounded-[100px] w-100 cursor-pointer transition-all delay-100 duration-150 hover:rounded-none"
+        alt="Foto de perfil do Oscar"
+        className="w-100 cursor-pointer rounded-3xl transition-all delay-100 duration-150 hover:rounded-none md:rounded-[100px]"
         onClick={() => setDialogState((prev) => !prev)}
       />
 
       <dialog
         ref={dialog}
         open={dialogState}
-        className="fixed top-0 left-0 w-screen h-screen bg-black/50 z-60"
+        className="fixed top-0 left-0 z-60 w-screen h-screen bg-black/50"
       >
-        <div className="relative flex justify-center items-center h-screen">
-          <img src="/foto-perfil.jpeg" alt="" className="h-[90vh]" />
+        <div className="relative flex items-center justify-center h-screen">
+          <img
+            src="/foto-perfil.jpeg"
+            alt="Foto de perfil do Oscar"
+            className="h-[70vh] md:h-[90vh]"
+          />
 
           <button
             ref={contractImageButton}
             onClick={() => setDialogState((prev) => !prev)}
-            className="absolute right-20 top-20 text-white text-3xl cursor-pointer"
+            className="absolute top-10 right-10 cursor-pointer text-3xl text-white"
           >
             <FontAwesomeIcon icon={faMinimize} />
           </button>

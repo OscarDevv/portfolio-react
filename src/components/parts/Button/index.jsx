@@ -13,7 +13,7 @@ function Button({ type, variant, children, ...props }) {
     light: "bg-white text-black hover:bg-neutral-200",
     dark: "bg-black text-white hover:bg-neutral-900",
     primary:
-      "bg-cyan-500 text-white border-cyan-300 border-2 hover:bg-cyan-600 hover:text-neutral-200 hover:border-cyan-500",
+      "text-white bg-cyan-500 border-2 border-cyan-300 hover:bg-cyan-600 hover:text-neutral-200 hover:border-cyan-500",
   };
 
   const addClasses = variants[variant] || "";

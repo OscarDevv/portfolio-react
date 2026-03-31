@@ -7,7 +7,7 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 
 function OtimizationProvider({ children }) {
   const { avgFps } = useFps();
-  const showSugestion = avgFps < 30;
+  const showSugestion = avgFps < 300;
   const [slowMode, setSlowMode] = useState(() => {
     const storageSlowMode = localStorage.getItem("slow-mode-active");
     return storageSlowMode ? JSON.parse(storageSlowMode) : false;
@@ -26,20 +26,21 @@ function OtimizationProvider({ children }) {
   }, [dialogDisplay]);
 
   return (
-    <OtimizationContext.Provider value={{ avgFps, slowMode }}>
+    <OtimizationContext value={{ avgFps, slowMode }}>
       {children}
 
       {showSugestion && (
         <div
-          className="fixed right-0 bottom-0 bg-slate-950 border-t-2 border-l-2 border-slate-500 p-10 z-70 rounded-tl-md"
+          className="fixed right-0 bottom-0 z-70 p-10 bg-slate-950 border-t-2 border-l-2 border-slate-500 rounded-tl-md"
           ref={dialog}
         >
-          <div className="flex justify-between items-center">
+          <div className="flex items-center justify-between">
             <span>FPS atual: {avgFps}</span>
             <FontAwesomeIcon
               icon={faX}
-              className="text-2xl cursor-pointer"
+              className="cursor-pointer text-2xl"
               onClick={() => setDialogDisplay(false)}
+              aria-label="Não avisar novamente durante esta seção"
             />
           </div>
 
@@ -57,7 +58,7 @@ function OtimizationProvider({ children }) {
           </Button>
         </div>
       )}
-    </OtimizationContext.Provider>
+    </OtimizationContext>
   );
 }
 
