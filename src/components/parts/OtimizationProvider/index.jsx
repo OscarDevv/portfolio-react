@@ -7,7 +7,7 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 
 function OtimizationProvider({ children }) {
   const { avgFps } = useFps();
-  const showSugestion = avgFps < 300;
+  const showSugestion = avgFps < 30;
   const [slowMode, setSlowMode] = useState(() => {
     const storageSlowMode = localStorage.getItem("slow-mode-active");
     return storageSlowMode ? JSON.parse(storageSlowMode) : false;
