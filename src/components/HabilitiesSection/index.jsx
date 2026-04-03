@@ -7,19 +7,19 @@ function HabilitiesSection() {
 
   return (
     <section
-      className="border-t-2 border-slate-500 px-16 py-30"
+      className="px-16 py-30 border-t-2 border-slate-500"
       id="habilities"
     >
       <Heading>Habilidades</Heading>
 
       <div
         id="habilities-list-container"
-        className="grid grid-cols-6 justify-items-center gap-4 my-12"
+        className="grid grid-cols-1 justify-items-start gap-4 my-12 sm:grid-cols-2 sm:justify-items-center md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
       >
         <Habilities element={habilityDescription} />
       </div>
 
-      <p ref={habilityDescription} className="text-center mx-4 text-xl">
+      <p ref={habilityDescription} className="mx-4 text-xl text-center">
         Clique em uma das habilidades para saber o quanto eu sei sobre cada uma
         delas.
       </p>

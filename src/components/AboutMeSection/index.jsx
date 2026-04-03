@@ -47,7 +47,7 @@ function AboutMeSection() {
               type="button"
               key={index}
               onClick={() => changeContent(btn.content)}
-              className="m-1 px-5 py-3 font-semibold cursor-pointer bg-cyan-700 border-2 border-cyan-500 rounded-xl text-white transition-colors duration-100 hover:bg-cyan-800 hover:border-cyan-500"
+              className="m-1 px-5 py-3 text-white font-semibold cursor-pointer bg-cyan-700 border-2 border-cyan-500 rounded-xl transition-colors duration-100 hover:bg-cyan-800 hover:border-cyan-500"
             >
               {btn.name}
             </button>

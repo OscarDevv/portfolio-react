@@ -62,7 +62,7 @@ function Habilities({ element }) {
         <div
           key={index}
           onClick={() => (element.current.innerText = item.content)}
-          className="flex justify-evenly items-center flex-col border-2 border-slate-500 rounded-xl size-50 cursor-pointer transition-colors hover:bg-sky-900 hover:border-sky-500"
+          className="flex flex-col items-center justify-evenly size-45 cursor-pointer border-2 border-slate-500 rounded-xl transition-colors hover:bg-sky-900 hover:border-sky-500 md:size-50"
         >
           <img
             src={item.icon}
@@ -72,7 +72,7 @@ function Habilities({ element }) {
             loading="lazy"
             className="select-none"
           />
-          <h4 className="text-2xl font-bold font-heading">{item.name}</h4>
+          <h4 className="text-2xl font-heading font-bold">{item.name}</h4>
         </div>
       ))}
     </>
