@@ -1,11 +1,11 @@
 import Navbar from "../Navbar";
-import CircleIcon from "../../parts/CircleIcon";
+import CircleIcon from "../CircleIcon";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useRef, useState, useContext } from "react";
 import gsap from "gsap";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import OtimizationContext from "../../parts/OtimizationProvider/OtimizationContext";
+import OtimizationContext from "../OtimizationProvider/OtimizationContext";
 
 function Header() {
   const headerRef = useRef(null);

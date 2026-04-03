@@ -1,10 +1,10 @@
-import DarkVeil from "../../parts/DarkVeil";
-import HeroGlass from "../HeroGlass";
-import CircleIcon from "../../parts/CircleIcon";
+import DarkVeil from "../DarkVeil/index.jsx";
+import HeroGlass from "../HeroGlass/index.jsx";
+import CircleIcon from "../CircleIcon/index.jsx";
 import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useContext, useEffect, useRef } from "react";
 import gsap from "gsap";
-import OtimizationContext from "../../parts/OtimizationProvider/OtimizationContext.js";
+import OtimizationContext from "../OtimizationProvider/OtimizationContext.js";
 
 function Hero() {
   const nextSectBtnRef = useRef(null);

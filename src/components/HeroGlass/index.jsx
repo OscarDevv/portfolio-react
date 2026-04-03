@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
-import Button, { ButtonGroup } from "../../parts/Button";
+import Button, { ButtonGroup } from "../Button";
 import { useEffect, useRef, useContext } from "react";
 import gsap from "gsap";
-import OtimizationContext from "../../parts/OtimizationProvider/OtimizationContext";
+import OtimizationContext from "../OtimizationProvider/OtimizationContext";
 
 function HeroGlass() {
   const heroGlassRef = useRef(null);

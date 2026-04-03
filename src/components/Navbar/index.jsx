@@ -1,6 +1,6 @@
 import { useEffect, useRef, useContext } from "react";
 import gsap from "gsap";
-import OtimizationContext from "../../parts/OtimizationProvider/OtimizationContext";
+import OtimizationContext from "../OtimizationProvider/OtimizationContext";
 
 function Navbar({ isDisplayed, animation }) {
   const navItems = [

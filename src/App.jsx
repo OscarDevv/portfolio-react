@@ -1,9 +1,10 @@
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
-import GradientLine from "./components/page/GradientLine";
-import Header from "./components/page/Header";
-import Hero from "./components/page/Hero";
-import AboutMe from "./components/page/AboutMe";
+import GradientLine from "./components/GradientLine";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import AboutMeSection from "./components/AboutMeSection";
+import HabilitiesSection from "./components/HabilitiesSection";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Header />
       <Hero />
       <main>
-        <AboutMe />
+        <AboutMeSection />
+        <HabilitiesSection />
       </main>
       <GradientLine />
 

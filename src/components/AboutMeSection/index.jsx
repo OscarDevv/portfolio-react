@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
-import Heading from "../../parts/Heading";
+import Heading from "../Heading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinimize } from "@fortawesome/free-solid-svg-icons";
 
-function AboutMe() {
+function AboutMeSection() {
   const toggleButtons = [
     {
       name: "Quem sou eu",
@@ -47,7 +47,7 @@ function AboutMe() {
               type="button"
               key={index}
               onClick={() => changeContent(btn.content)}
-              className="m-1 px-5 py-3 font-semibold cursor-pointer bg-cyan-500 border-2 border-cyan-300 rounded-xl transition-colors duration-100 hover:bg-cyan-600 hover:text-neutral-200 hover:border-cyan-500"
+              className="m-1 px-5 py-3 font-semibold cursor-pointer bg-cyan-700 border-2 border-cyan-500 rounded-xl text-white transition-colors duration-100 hover:bg-cyan-800 hover:border-cyan-500"
             >
               {btn.name}
             </button>
@@ -61,6 +61,7 @@ function AboutMe() {
         src="/foto-perfil.jpeg"
         alt="Foto de perfil do Oscar"
         className="w-100 cursor-pointer rounded-3xl transition-all delay-100 duration-150 hover:rounded-none md:rounded-[100px]"
+        loading="lazy"
         onClick={() => setDialogState((prev) => !prev)}
       />
 
@@ -74,6 +75,7 @@ function AboutMe() {
             src="/foto-perfil.jpeg"
             alt="Foto de perfil do Oscar"
             className="h-[70vh] md:h-[90vh]"
+            loading="lazy"
           />
 
           <button
@@ -89,4 +91,4 @@ function AboutMe() {
   );
 }
 
-export default AboutMe;
+export default AboutMeSection;
