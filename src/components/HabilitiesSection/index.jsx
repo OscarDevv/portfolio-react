@@ -13,7 +13,6 @@ function HabilitiesSection() {
       <Heading>Habilidades</Heading>
 
       <div
-        id="habilities-list-container"
         className="grid grid-cols-1 justify-items-start gap-4 my-12 sm:grid-cols-2 sm:justify-items-center md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
       >
         <Habilities element={habilityDescription} />
