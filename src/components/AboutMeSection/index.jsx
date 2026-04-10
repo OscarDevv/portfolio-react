@@ -35,7 +35,7 @@ function AboutMeSection() {
 
   return (
     <section
-      className="flex flex-col items-center gap-5 px-16 py-30 border-t-2 border-slate-500 md:items-start lg:flex-row lg:justify-between"
+      className="flex flex-col items-center gap-5 px-8 py-30 border-t-2 border-slate-500 md:items-start md:px-16 lg:flex-row lg:justify-between"
       id="about"
     >
       <div className="mr-10">

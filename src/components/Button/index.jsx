@@ -23,7 +23,7 @@ function Button({ type, variant, children, ...props }) {
       <a
         {...props}
         className={
-          "z-40 px-5 py-3 text-xl font-semibold cursor-pointer rounded-full transition-colors duration-200 " +
+          "z-40 text-center px-5 py-3 text-xl font-semibold cursor-pointer rounded-full transition-colors duration-200 " +
           addClasses
         }
       >
@@ -36,7 +36,7 @@ function Button({ type, variant, children, ...props }) {
     <button
       {...props}
       className={
-        "z-40 px-5 py-3 text-xl font-semibold cursor-pointer rounded-full transition-colors duration-200 " +
+        "z-40 text-center px-5 py-3 text-xl font-semibold cursor-pointer rounded-full transition-colors duration-200 " +
         addClasses
       }
     >
