@@ -7,7 +7,7 @@ function HabilitiesSection() {
 
   return (
     <section
-      className="px-16 py-30 border-t-2 border-slate-500"
+      className="px-8 py-30 border-t-2 border-slate-500 md:px-16"
       id="habilities"
     >
       <Heading>Habilidades</Heading>

@@ -39,7 +39,7 @@ function ProjectsSection() {
   ];
 
   return (
-    <section className="px-16 py-30 border-t-2 border-slate-500" id="projects">
+    <section className="px-8 py-30 border-t-2 border-slate-500 md:px-16" id="projects">
       <Heading>Projetos</Heading>
       <div className="flex flex-wrap items-center justify-between gap-5">
         {projectsList.map((item, index) => (
