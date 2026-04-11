@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import AboutMeSection from "./components/AboutMeSection";
 import HabilitiesSection from "./components/HabilitiesSection";
 import ProjectsSection from "./components/ProjectsSection";
+import ContactSection from "./components/ContactSection";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <AboutMeSection />
         <HabilitiesSection />
         <ProjectsSection />
+        <ContactSection />
       </main>
       <GradientLine />
 

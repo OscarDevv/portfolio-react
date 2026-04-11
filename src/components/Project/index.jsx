@@ -5,7 +5,10 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 function Project({ data, ...props }) {
   return (
-    <article {...props} className="w-110 grow border-2 border-slate-500 rounded-xl overflow-hidden mt-8">
+    <article
+      {...props}
+      className="grow w-110 mt-8 overflow-hidden border-2 border-slate-500 rounded-xl"
+    >
       <img
         src={data.img}
         alt={`Imagem do projeto ${data.name}`}
@@ -13,10 +16,15 @@ function Project({ data, ...props }) {
       />
 
       <div className="px-5 py-10">
-        <h4 className="text-2xl font-bold font-heading mb-4">{data.name}</h4>
+        <h4 className="mb-4 text-2xl font-heading font-bold">{data.name}</h4>
 
         {data.tools.map((tool, index) => (
-          <span key={index} className="bg-cyan-700 text-white mr-2 py-1 px-3 rounded-full">{tool}</span>
+          <span
+            key={index}
+            className="mr-2 px-3 py-1 text-white bg-cyan-700 rounded-full"
+          >
+            {tool}
+          </span>
         ))}
 
         <p className="my-4">{data.description}</p>
