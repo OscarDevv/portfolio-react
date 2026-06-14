@@ -58,7 +58,7 @@ Nesta seção, você poderá ver como acessar o portfólio tanto na web quanto n
 Esse é o mais fácil de todos, tudo o que você precisa é acessar [o link](https://oscardevv-portfolio-v1.vercel.app):
 
 ```txt
-https://oscardevv.vercel.app
+https://oscardevv-portfolio-v1.vercel.app
 ```
 
 ### Localmente
